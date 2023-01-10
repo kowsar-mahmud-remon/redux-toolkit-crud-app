@@ -19,7 +19,7 @@ const BooksView = () => {
         <table className="table table-zebra w-full">
           <thead>
             <tr>
-              <th>ID</th>
+              <th></th>
               <th>Title</th>
               <th>Author</th>
               <th>Action</th>
@@ -31,11 +31,11 @@ const BooksView = () => {
                 const { id, title, author } = book;
                 return (
                   <tr key={id}>
-                    <td>{id}</td>
+                    <td></td>
                     <td>{title}</td>
                     <td>{author}</td>
                     <td>
-                      <Link to="/edit-book">
+                      <Link to="/edit-book" state={{ id, title, author }}>
                         <button className="btn btn-ghost">Edit</button>
                       </Link>
                       <button
